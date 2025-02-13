@@ -78,6 +78,9 @@ export default function LandingPage({ onLibraryParsed }: LandingPageProps) {
 						<Music2 className="h-6 w-6 text-blue-500" />
 						<span className="font-semibold text-xl">iTunes Library Viewer</span>
 					</div>
+					<div className="text-xs text-red-400 border border-red-400 rounded px-2 py-1 bg-gray-50">
+						Not affiliated with Apple Inc. or iTunes in any way
+					</div>
 				</div>
 			</header>
 

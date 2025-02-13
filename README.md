@@ -1,5 +1,7 @@
 # iTunes Library XML Viewer
 
+> Not affiliated with Apple Inc. or iTunes in any way.
+
 A web-based viewer for iTunes Library XML files built with Next.js. View your old iTunes library data including playlists, songs, albums and artists.
 
 ## Features
