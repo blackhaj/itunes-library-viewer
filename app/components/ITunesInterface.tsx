@@ -147,6 +147,7 @@ export default function ITunesInterface({ library }: ITunesInterfaceProps) {
 								<SortableHeader column="Album" />
 								<SortableHeader column="Total Time" />
 								<SortableHeader column="Genre" />
+								<SortableHeader column="Play Count" />
 								<SortableHeader column="Year" />
 							</tr>
 						</thead>
@@ -175,6 +176,7 @@ export default function ITunesInterface({ library }: ITunesInterfaceProps) {
 											.padStart(2, "0")}
 									</td>
 									<td className="py-2">{track.Genre}</td>
+									<td className="py-2">{track["Play Count"] || 0}</td>
 									<td className="py-2">{track.Year}</td>
 								</tr>
 							))}
@@ -225,6 +227,7 @@ export default function ITunesInterface({ library }: ITunesInterfaceProps) {
 									<SortableHeader column="Album" />
 									<SortableHeader column="Total Time" />
 									<SortableHeader column="Genre" />
+									<SortableHeader column="Play Count" />
 									<SortableHeader column="Year" />
 								</tr>
 							</thead>
@@ -253,6 +256,7 @@ export default function ITunesInterface({ library }: ITunesInterfaceProps) {
 												.padStart(2, "0")}
 										</td>
 										<td className="py-2">{track.Genre}</td>
+										<td className="py-2">{track["Play Count"] || 0}</td>
 										<td className="py-2">{track.Year}</td>
 									</tr>
 								))}
