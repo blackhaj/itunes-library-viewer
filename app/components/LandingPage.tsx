@@ -123,6 +123,56 @@ export default function LandingPage({ onLibraryParsed }: LandingPageProps) {
 							{error}
 						</div>
 					)}
+					<div className="mt-4 text-sm text-gray-600 flex justify-center gap-2">
+						<button
+							type="button"
+							onClick={async () => {
+								setIsLoading(true);
+								setError(null);
+								try {
+									const response = await fetch(
+										"https://raw.githubusercontent.com/jasonrudolph/stratify/refs/heads/master/spec/fixtures/iTunes%20Music%20Library.xml",
+									);
+									if (response.status === 429) {
+										setError("Please try again later.");
+										return;
+									}
+									const text = await response.text();
+									const parsedLibrary = await parseITunesLibrary(text);
+									onLibraryParsed(parsedLibrary);
+								} catch (error) {
+									console.error("Error loading example library:", error);
+									setError(
+										`Error loading example library: ${error instanceof Error ? error.message : String(error)}`,
+									);
+								} finally {
+									setIsLoading(false);
+								}
+							}}
+							className="text-blue-500 hover:text-blue-600 underline flex items-center justify-center gap-2"
+						>
+							<Disc className="h-4 w-4" />
+							Try with an example iTunes Library.xml file
+						</button>
+						<a
+							href="https://github.com/jasonrudolph/stratify/blob/master/spec/fixtures/iTunes%20Music%20Library.xml?utm_source=chatgpt.com"
+							className="text-blue-500 hover:text-blue-600 underline"
+							target="_blank"
+							rel="noreferrer"
+						>
+							(source)
+						</a>
+					</div>
+					<div className="mt-14">
+						<h2 className="text-3xl font-bold text-center mb-12">
+							How it looks 👇
+						</h2>
+						<img
+							src="/screenshot.png"
+							alt="Screenshot of the iTunes Library Viewer application"
+							className="rounded-lg shadow-lg max-w-screen-md mx-auto"
+						/>
+					</div>
 				</div>
 			</section>
 
