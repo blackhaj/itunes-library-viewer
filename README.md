@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# iTunes Library XML Viewer
 
-## Getting Started
+A web-based viewer for iTunes Library XML files built with Next.js. View your old iTunes library data including playlists, songs, albums and artists.
 
-First, run the development server:
+## Features
+
+- Drag & drop iTunes Library XML file import
+- View songs, albums, artists and playlists
+- Search functionality across all views
+- Sortable columns for song lists
+- Quick links to search songs on Spotify
+- Responsive design
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- TailwindCSS
+- react-dropzone for file handling
+- fast-xml-parser for XML parsing
+
+## Running Locally
+
+1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/blackhaj/itunes-library-viewer.git
+cd itunes-library-viewer
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Find your `iTunes Library.xml` file (for old libraries it was stored in the iTunes Media folder)
 
-## Deploy on Vercel
+2. Visit the application in your browser
+3. Drag and drop your iTunes Library XML file onto the upload area
+4. Browse your library using the left menu to switch between different views
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Development
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was build mainly with AI. So all the bad code was the AI's fault and the good code was mine.
+
+## License
+
+MIT
+
+## Contributing
+
+I will not be updating this project.
